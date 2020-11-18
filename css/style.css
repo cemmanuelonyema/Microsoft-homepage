@@ -71,6 +71,7 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: inherit;
+    scroll-behavior: smooth;
 }
 
 html {
@@ -107,7 +108,7 @@ img{
 
 
 .container{
-   max-width: 85%;
+   max-width: 90%;
     margin: 0 auto;
     padding: 0 2%;
 
@@ -172,10 +173,18 @@ img{
     width: 11rem;
 }
 
+.menu-btn{
+  position: absolute;
+  top: 1.5rem;
+  right: 4rem;
+  cursor: pointer;
+  display: none;
+}
+
 .header-nav{
     display: flex;
     align-items: center;
-    justify-content: space-around;
+    justify-content: space-between;
     height: 6rem;
     padding: 2rem 0;
     font-size: 1.4rem;
@@ -196,7 +205,7 @@ img{
     background-color: var(--white-green);
    
 }
-
+.nav-right .nav-item
 .nav-item{
     padding: 0 1rem;
     transition: all .3s;
@@ -266,8 +275,8 @@ img{
 /*---------------------------------------*/
 /*---- SECTIONS-XBOX----*/
 
-.section-xbox{
-    background: url('https://i.ibb.co/tBJGPD9/xbox.png') no-repeat top center/cover;
+.section-xbox {
+    background: url('https://i.ibb.co/tBJGPD9/xbox.png') no-repeat  center/cover;
     padding: 8rem 0;
    
 }
@@ -384,6 +393,86 @@ img{
   .footer li {
    
     padding-right: 3rem;
+  }
+
+  @media screen and (max-width: 768px){
+    .home-cards{
+      grid-template-columns: repeat(2, 1fr);
+
+    }
+    .menu-btn{
+      display: block;
+    }
+
+    
+.nav-list{
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #7c7c7c;
+  width: 50%;
+  height: 100%;
+  padding: 20px;
+  transform: translate(-50rem);
+  transition: transform .4s;
+  flex: 0;
+
+
+}
+
+.show{
+  transform: translate(-3rem);
+}
+
+
+.nav-right {
+
+  margin-right: 6rem;
+ 
+}
+
+.nav-list li a{
+  color: #fff;
+  
+}
+.nav-list .nav-item{
+  padding: 2rem 0;
+
+}
+
+.nav-right i{
+  font-size: 1.3rem;
+}
+
+
+    .section-xbox,
+    .section-carbon{
+      background: #f8f8f8;
+      color: var(--grey-1);
+    }
+    .section-carbon .content, .section-xbox .content{
+      width: 100%;
+    }
+
+    .footer-nav{
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+  }
+  
+
+  @media screen and (max-width: 500px){
+    .home-cards{
+      grid-template-columns: 1fr;
+
+    }
+
+
+    .footer-nav{
+      grid-template-columns: 1fr;
+    }
+
   }
   
   
